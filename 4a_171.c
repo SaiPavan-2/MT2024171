@@ -9,7 +9,7 @@ if(fd==-1){
 perror("open");
 return 1;
 }
-printf("File opened\n",fd);
+printf("File opened%d\n",fd);
 close(fd);
 return 0;
 }

@@ -42,3 +42,4 @@ int main(int argc, char *argv[]) {
     close(fd);
     return 0;
 }
+/** Output:lseek moved the file pointer to: 223 **/

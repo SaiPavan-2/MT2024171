@@ -1,3 +1,9 @@
+/**
+Name:filedescriptor171.c
+Author:Pavan
+DEscription:Program to create a file and print the file descriptor value
+Date:20th August 2024
+**/
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -16,3 +22,6 @@ return 1;
 }
 return 0;
 }
+/**
+Output:File descriptor is :3
+**/

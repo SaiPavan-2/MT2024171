@@ -1,3 +1,9 @@
+/**
+Name:9_171.c
+Author:Pavan
+Description:Program to print the following information about a given file.
+Date:22nd August 2024
+**/
 #include <stdio.h>
 #include <sys/stat.h>
 #include <time.h>
@@ -36,4 +42,3 @@ Last modification time-Thu Aug 22 08:42:07 2024
 
 Time of last change-Thu Aug 22 08:42:07 2024
 **/
-

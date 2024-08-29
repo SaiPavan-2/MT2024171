@@ -1,3 +1,9 @@
+/**
+Name:q20.c
+Author:Pavan
+Description:Find out the priority of your running program. Modify the priority with nice command.
+Date:29th August 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>

@@ -1,3 +1,9 @@
+/**
+Name:5_171.c
+Author:Pavan
+Description:Program to create five new files with infinite loop
+Date:22nd August 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -15,6 +21,7 @@ int main() {
                 exit(EXIT_FAILURE);
             }
             write(fds[i], "Power Pavan\n", 13);
+	printf("Written into file %d\n",i+1);
             close(fds[i]);
         }
 
@@ -23,3 +30,68 @@ int main() {
 
     return 0;
 }
+/**
+Output:
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+Written into file 1
+Written into file 2
+Written into file 3
+Written into file 4
+Written into file 5
+
+**/
+

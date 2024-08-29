@@ -1,3 +1,10 @@
+/**
+Name:q22.c
+Author:Pavan
+Description:Program to  open a file, call fork, and then write to the file by both the child as well as the
+parent processes
+Date:August 29th 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

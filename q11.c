@@ -1,3 +1,10 @@
+/**
+Name:q11.c
+Author:Pavan
+Description:Program to open a file, duplicate the file descriptor and append the file with both the
+descriptors and check whether the file is updated properly or not.
+Date:August 27th 2024 
+**/
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>

@@ -1,3 +1,9 @@
+/**
+Name:q12.c
+Author:Pavan
+Description:Program to find out the opening mode of a file.
+Date:August 29th 2024
+**/
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>

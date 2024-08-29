@@ -1,3 +1,10 @@
+/**
+Name:10_171.c
+Author:Pavan
+Description:Program to open a file with read write mode, write 10 bytes, move the file pointer by 10
+bytes (use lseek) and write again 10 bytes.
+Date:August 27th 2024
+**/
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>

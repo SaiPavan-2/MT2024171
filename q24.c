@@ -1,3 +1,9 @@
+/**
+Name:q24.c
+Author:Pavan
+Description:Program to create an orphan process.
+Date:29th August 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

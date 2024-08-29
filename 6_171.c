@@ -1,3 +1,9 @@
+/**
+Name:6_171.c
+Author:Pavan
+Description:Program to take input from STDIN and display on STDOUT
+Date:22nd August 2024
+**/
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -16,3 +22,8 @@ int main() {
 
     return 0;
 }
+/**
+Output:
+Hello Pavan
+Hello Pavan
+**/

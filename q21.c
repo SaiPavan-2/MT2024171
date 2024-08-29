@@ -1,3 +1,9 @@
+/**
+Name:q21.c
+Author:Pavan
+Description:Program to  call fork and print the parent and child process id.
+Date:August 27th 2024
+**/
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>

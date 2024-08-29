@@ -1,3 +1,9 @@
+/**
+Name:q23.c
+Author:Pavan
+Description:Program to create a Zombie state of the running program
+Date:27th August 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

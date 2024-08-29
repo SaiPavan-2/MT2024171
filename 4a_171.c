@@ -1,3 +1,8 @@
+/**
+Name:4a_171.c
+Author:pavan
+Description:Program to open an existing file with read write mode
+Date:20 August 2024**/
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -13,3 +18,6 @@ printf("File opened%d\n",fd);
 close(fd);
 return 0;
 }
+/**
+Output:File opened3
+**/

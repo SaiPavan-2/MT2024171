@@ -1,3 +1,10 @@
+/**
+Name:q13.c
+Author:Pavan
+Description:Program to wait for a STDIN for 10 seconds using select. Write a proper print statement to
+verify whether the data is available within 10 seconds or not
+Date:27th August 2024
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

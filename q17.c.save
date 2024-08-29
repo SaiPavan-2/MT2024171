@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
+
+#define TICKET_FILE "ticket.dat"
+#define INITIAL_TICKET "1\n"
+
+void initialize(int fd) {
+    if (write(fd, INITIAL_TICKET, strlen(INITIAL_TICKET)) == -1) {
+        perror("Failed to write initial ticket number");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+    printf("Initial ticket number written.\n");
+}
+
+void increment(int fd) {
+    struct flock lock;
+    lock.l_type = F_WRLCK;
+    lock.l_whence = SEEK_SET;
+    lock.l_start = 0;
+    lock.l_len = 0;
+
+    if (fcntl(fd, F_SETLKW, &lock) == -1) {
+        perror("Failed to acquire write lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    char buffer[10];
+    ssize_t bytes_read = read(fd, buffer, sizeof(buffer) - 1);
+    if (bytes_read == -1) {
+        perror("Failed to read ticket number");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+    buffer[bytes_read] = '\0';
+
+    int ticket_number = atoi(buffer);
+    printf("Current ticket number: %d\n", ticket_number);
+    ticket_number++;
+
+    lseek(fd, 0, SEEK_SET);
+
+    char new_ticket[10];
+    snprintf(new_ticket, sizeof(new_ticket), "%d\n", ticket_number);
+    if (write(fd, new_ticket, strlen(new_ticket)) == -1) {
+        perror("Failed to write new ticket number");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    printf("New ticket number: %d\n", ticket_number);
+
+    lock.l_type = F_UNLCK;
+    if (fcntl(fd, F_SETLK, &lock) == -1) {
+        perror("Failed to release write lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+}
+
+int main() {
+    int fd = open(TICKET_FILE, O_RDWR | O_CREAT, 0666);
+    if (fd == -1) {
+        perror("Failed to open file");
+        exit(EXIT_FAILURE);
+    }
+
+    char buffer[1];
+    ssize_t bytes_read = read(fd, buffer, sizeof(buffer));
+    if (bytes_read == -1) {
+        perror("Failed to read file");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    if (bytes_read == 0) {
+        initialize(fd);
+    }
+
+    lseek(fd, 0, SEEK_SET);
+
+    increment(fd);
+
+    close(fd);
+    return 0;
+}

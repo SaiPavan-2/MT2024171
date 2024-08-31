@@ -1,5 +1,5 @@
 /**
-Name:hard171.c
+Name:1b.c
 Author:Pavan
 Description:Creating hardlink.
 Date:20th August 2024"

@@ -1,5 +1,5 @@
 /**
-Name:filedescriptor171.c
+Name:Q3.c
 Author:Pavan
 DEscription:Program to create a file and print the file descriptor value
 Date:20th August 2024

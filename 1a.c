@@ -1,5 +1,5 @@
 /**
-Name:soft.c
+Name:1a.c
 Author:Pavan
 Description:To create soft link
 Date:20th August 2024

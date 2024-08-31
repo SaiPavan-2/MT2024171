@@ -1,5 +1,5 @@
 /**
-Name:fifo171.c
+Name:1c.c
 Author:Pavan
 Description:To create FIFO file type
 Date:20th august 2024**/
